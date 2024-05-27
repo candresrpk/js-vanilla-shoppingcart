@@ -34,11 +34,85 @@
             </nav>
             
         </header>
-        <main>
+        <main class="container my-5">
 
+            <h1>Shopping cart</h1>
+            <hr>
 
+            <div class="row" id="items">
+
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Accion</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="objects"> </tbody>
+                <tfoot>
+                    <tr id="footer">
+                        <th scope="roe" colspan="5">Carrito vacio - comienza a comprar</th>
+                    </tr>
+                </tfoot>
+            </table>
 
         </main>
+
+        <!-- Card template -->
+        <template id="template-card">
+            <div class="col-12 mb-2 col-md-4">
+                <div class="card">
+                    <img src="" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Title</h5>
+                        <p>Price</p>
+                        <div class="btn btn-dark">Buy !!</div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <!-- End Card template -->
+
+        <!-- Template carrito -->
+            <template id="template-carrito">
+                <tr>
+                    <th scope="row">id</th>
+                    <td>cafe</td>
+                    <td>1</td>
+                    <td>
+                        <button class="btn btn-info btn-sm">
+                            +
+                        </button>
+                        <button class="btn btn-danger btn-sm">
+                            -
+                        </button>
+                    </td>
+                    <td><span>price</span></td>
+                </tr>
+            </template>
+        <!-- end Template carrito -->
+
+
+        <!-- Footer Template -->
+            <template id="template-footer">
+                <th scope="row" colspan="2">
+                    Total Productos
+                </th>
+                <td>10</td>
+                <td>
+                    <button class="btn btn-danger btn-sm" id="vaciar-carrito">Vaciar</button>
+                </td>
+                <td class="font-weight-bold">$ <span>5000</span></td>
+            </template>
+        <!-- End Footer Template -->
+
+
+
         <footer>
             <!-- place footer here -->
         </footer>
@@ -54,5 +128,8 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
+        <!-- JS -->
+        <script src="./app.js"></script>
     </body>
 </html>
